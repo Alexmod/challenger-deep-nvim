@@ -30,6 +30,9 @@ function M.setup(opts)
   local c = M.colors
   local bg = opts.transparent and 'NONE' or c.asphalt
 
+  vim.opt.termguicolors = true
+
+  -- Base editor
   highlight('Normal',        { fg = c.clouds, bg = bg })
   highlight('Comment',       { fg = c.medium_gray, italic = true })
   highlight('Constant',      { fg = c.yellow })
@@ -51,7 +54,7 @@ function M.setup(opts)
   highlight('@function',     { link = 'Function' })
   highlight('@keyword',      { link = 'Statement' })
 
-  -- LSP Diagnostics
+  -- Diagnostics
   highlight('DiagnosticError', { fg = c.dark_red })
   highlight('DiagnosticWarn',  { fg = c.dark_yellow })
   highlight('DiagnosticInfo',  { fg = c.dark_blue })
@@ -81,6 +84,34 @@ function M.setup(opts)
 
   -- nvim-web-devicons
   highlight('DevIconDefault', { fg = c.blue })
+
+  -- Lualine
+  pcall(function()
+    require('lualine').setup {
+      options = {
+        theme = {
+          normal = { c = { fg = c.clouds, bg = c.dark_asphalt }},
+          insert = { c = { fg = c.clouds, bg = c.dark_blue }},
+          visual = { c = { fg = c.clouds, bg = c.dark_green }},
+          replace = { c = { fg = c.clouds, bg = c.dark_red }},
+          command = { c = { fg = c.clouds, bg = c.dark_yellow }},
+          inactive = { c = { fg = c.medium_gray, bg = c.asphalt_subtle }},
+        }
+      }
+    }
+  end)
+
+  -- Bufferline
+  pcall(function()
+    require("bufferline").setup {
+      highlights = {
+        fill = { fg = c.clouds, bg = c.asphalt },
+        background = { fg = c.medium_gray, bg = c.asphalt },
+        buffer_selected = { fg = c.asphalt, bg = c.blue, bold = true },
+        tab_selected = { fg = c.asphalt, bg = c.blue, bold = true },
+      }
+    }
+  end)
 end
 
 return M
