@@ -55,10 +55,7 @@ highlight('@string',           { link = 'String' })
 highlight('@number',           { link = 'Number' })
 highlight('@constant',         { link = 'Constant' })
 highlight('@function',         { link = 'Function' })
-highlight('@function.python',  { link = 'Function' })
 highlight('@keyword',          { link = 'Statement' })
-highlight('@keyword.function', { link = 'Statement' })
-highlight('@keyword.function.python', { link = 'Statement' })
 
 
   -- Diagnostics
