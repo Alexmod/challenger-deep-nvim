@@ -45,14 +45,21 @@ function M.setup(opts)
   highlight('Special',       { fg = c.cyan })
   highlight('Underlined',    { fg = c.clouds, underline = true })
 
-  -- Treesitter
-  highlight('@comment',      { link = 'Comment' })
-  highlight('@variable',     { link = 'Identifier' })
-  highlight('@string',       { link = 'String' })
-  highlight('@number',       { link = 'Number' })
-  highlight('@constant',     { link = 'Constant' })
-  highlight('@function',     { link = 'Function' })
-  highlight('@keyword',      { link = 'Statement' })
+
+-- Treesitter highlights
+highlight('@comment',          { link = 'Comment' })
+highlight('@variable',         { link = 'Identifier' })
+highlight('@variable.python',  { link = 'Identifier' })
+highlight('@parameter.python', { link = 'Identifier' })
+highlight('@string',           { link = 'String' })
+highlight('@number',           { link = 'Number' })
+highlight('@constant',         { link = 'Constant' })
+highlight('@function',         { link = 'Function' })
+highlight('@function.python',  { link = 'Function' })
+highlight('@keyword',          { link = 'Statement' })
+highlight('@keyword.function', { link = 'Statement' })
+highlight('@keyword.function.python', { link = 'Statement' })
+
 
   -- Diagnostics
   highlight('DiagnosticError', { fg = c.dark_red })
