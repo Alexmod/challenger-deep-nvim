@@ -81,16 +81,6 @@ Plugin 'challenger-deep-theme/challenger-deep-nvim'
 *.color15:      #a6b3cc
 ```
 
-### Lightline Theme ###
-
-![Lightline](https://challenger-deep-theme.github.io/images/screenshots/vim-lightline.png)
-
-Challenger Deep supports [lightline.vim](https://github.com/itchyny/lightline.vim). To enable the colorscheme,
-add one of the following lines to your `.vimrc`:
-
-``` viml
-let g:lightline = { 'colorscheme': 'challenger_deep'}
-```
 
 ### Lualine Theme ###
 
