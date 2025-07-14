@@ -2,9 +2,13 @@
 
 ### [Challenger Deep Theme](https://challenger-deep-theme.github.io/) for VIM
 
-To enable this color scheme, set it in your vimrc:
-```
-colorscheme challenger_deep
+To enable this color scheme with **Neovim**, use the Lua setup function and then
+load the colorscheme:
+```lua
+require('challenger_deep').setup({
+  transparent = true,
+})
+vim.cmd('colorscheme challenger_deep')
 ```
 
 ### Terminal True Color Support ###
@@ -18,12 +22,12 @@ endif
 ### Installation
 
 #### vim-plug ###
-```
-Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+```lua
+Plug 'challenger-deep-theme/challenger-deep-nvim'
 ```
 #### vundle ###
-```
-Plugin 'challenger-deep-theme/vim', {'name': 'challenger-deep-theme'}
+```viml
+Plugin 'challenger-deep-theme/challenger-deep-nvim'
 ```
 
 ### Screenshot ###
@@ -95,7 +99,10 @@ add the following lines to your `init.lua`:
 
 ```lua
 require'lualine'.setup {
-  options = { theme = 'challenger_deep' }
+  options = {
+    theme = 'challenger_deep',
+    section_separators = { left = '', right = '' },
+  }
 }
 ```
 
