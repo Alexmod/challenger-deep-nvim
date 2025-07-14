@@ -85,6 +85,11 @@ function M.setup(opts)
   -- nvim-web-devicons
   highlight('DevIconDefault', { fg = c.blue })
 
+  -- Tabline (native Neovim :tabs)
+  highlight('TabLine',     { fg = c.medium_gray, bg = c.asphalt })
+  highlight('TabLineSel',  { fg = c.asphalt_subtle, bg = c.blue, bold = true })
+  highlight('TabLineFill', { fg = c.medium_gray, bg = c.asphalt })
+
   -- Lualine auto theme
   pcall(function()
     require('lualine').setup {
