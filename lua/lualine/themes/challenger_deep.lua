@@ -27,6 +27,7 @@ local challenger_deep = {
   visual = {
     b = { fg = colors.asphalt_subtle, bg = colors.dark_yellow },
     a = { fg = colors.asphalt_subtle, bg = colors.yellow , gui = "bold", },
+    c = { fg = colors.white, bg = colors.asphalt_subtle },
   },
   inactive = {
     b = { fg = colors.dark_asphalt, bg = colors.asphalt_subtle },
@@ -36,10 +37,12 @@ local challenger_deep = {
   replace = {
     b = { fg = colors.asphalt_subtle, bg = colors.dark_green },
     a = { fg = colors.asphalt_subtle, bg = colors.green , gui = "bold", },
+    c = { fg = colors.white, bg = colors.asphalt_subtle },
   },
   insert = {
     b = { fg = colors.asphalt_subtle, bg = colors.dark_red },
     a = { fg = colors.asphalt_subtle, bg = colors.red , gui = "bold", },
+    c = { fg = colors.white, bg = colors.asphalt_subtle },
   },
 }
 
