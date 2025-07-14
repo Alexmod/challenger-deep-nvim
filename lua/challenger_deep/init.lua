@@ -108,31 +108,31 @@ function M.setup(opts)
     }
   end)
 
-  -- Bufferline auto theme
-  pcall(function()
-    require("bufferline").setup {
-      highlights = {
-        fill = { fg = c.medium_gray, bg = c.asphalt },
-        background = { fg = c.medium_gray, bg = c.asphalt },
-        buffer_visible = { fg = c.clouds, bg = c.asphalt },
-        buffer_selected = { fg = c.asphalt_subtle, bg = c.blue, bold = true },
-        tab = { fg = c.medium_gray, bg = c.asphalt },
-        tab_selected = { fg = c.asphalt_subtle, bg = c.blue, bold = true },
-        separator = { fg = c.asphalt, bg = c.asphalt },
-        separator_selected = { fg = c.blue, bg = c.blue },
-        indicator_selected = { fg = c.blue, bg = c.blue },
-        close_button = { fg = c.medium_gray, bg = c.asphalt },
-        close_button_selected = { fg = c.asphalt_subtle, bg = c.blue },
-        modified = { fg = c.dark_yellow, bg = c.asphalt },
-        modified_selected = { fg = c.dark_yellow, bg = c.blue },
-      },
-      options = {
-        show_buffer_close_icons = false,
-        show_close_icon = false,
-        separator_style = "thin",
-      }
+-- Bufferline auto theme
+pcall(function()
+  require("bufferline").setup {
+    options = {
+      show_buffer_close_icons = false,
+      show_close_icon = false,
+      separator_style = "thin",
+    },
+    highlights = {
+      fill = { guifg = c.medium_gray, guibg = c.asphalt },
+      background = { guifg = c.medium_gray, guibg = c.asphalt },
+      buffer_visible = { guifg = c.clouds, guibg = c.asphalt },
+      buffer_selected = { guifg = c.asphalt_subtle, guibg = c.blue, gui = "bold" },
+      tab = { guifg = c.medium_gray, guibg = c.asphalt },
+      tab_selected = { guifg = c.asphalt_subtle, guibg = c.blue, gui = "bold" },
+      separator = { guifg = c.asphalt, guibg = c.asphalt },
+      separator_selected = { guifg = c.blue, guibg = c.blue },
+      indicator_selected = { guifg = c.blue, guibg = c.blue },
+      close_button = { guifg = c.medium_gray, guibg = c.asphalt },
+      close_button_selected = { guifg = c.asphalt_subtle, guibg = c.blue },
+      modified = { guifg = c.dark_yellow, guibg = c.asphalt },
+      modified_selected = { guifg = c.dark_yellow, guibg = c.blue },
     }
-  end)
+  }
+end)
 end
 
 return M
