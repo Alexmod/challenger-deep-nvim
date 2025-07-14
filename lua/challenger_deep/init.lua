@@ -109,9 +109,22 @@ function M.setup(opts)
       highlights = {
         fill = { fg = c.medium_gray, bg = c.asphalt },
         background = { fg = c.medium_gray, bg = c.asphalt },
+        buffer_visible = { fg = c.clouds, bg = c.asphalt },
         buffer_selected = { fg = c.asphalt_subtle, bg = c.blue, bold = true },
+        tab = { fg = c.medium_gray, bg = c.asphalt },
         tab_selected = { fg = c.asphalt_subtle, bg = c.blue, bold = true },
+        separator = { fg = c.asphalt, bg = c.asphalt },
+        separator_selected = { fg = c.blue, bg = c.blue },
         indicator_selected = { fg = c.blue, bg = c.blue },
+        close_button = { fg = c.medium_gray, bg = c.asphalt },
+        close_button_selected = { fg = c.asphalt_subtle, bg = c.blue },
+        modified = { fg = c.dark_yellow, bg = c.asphalt },
+        modified_selected = { fg = c.dark_yellow, bg = c.blue },
+      },
+      options = {
+        show_buffer_close_icons = false,
+        show_close_icon = false,
+        separator_style = "thin",
       }
     }
   end)
