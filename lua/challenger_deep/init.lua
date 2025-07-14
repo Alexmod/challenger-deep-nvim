@@ -96,7 +96,6 @@ highlight('BufferLineBackground',         { fg = c.medium_gray, bg = c.asphalt }
 highlight('BufferLineBufferVisible',      { fg = c.clouds,      bg = c.asphalt })
 highlight('BufferLineBufferSelected',     { fg = c.asphalt_subtle, bg = c.blue, bold = true })
 highlight('BufferLineTab',                { fg = c.medium_gray, bg = c.asphalt })
-highlight('BufferLineTabSelected',        { fg = c.asphalt_subtle, bg = c.blue, bold = true })
 highlight('BufferLineSeparator',          { fg = c.dark_asphalt, bg = c.asphalt })
 highlight('BufferLineSeparatorSelected',  { fg = c.blue, bg = c.blue })
 highlight('BufferLineSeparatorVisible',   { fg = c.dark_asphalt, bg = c.asphalt })
@@ -105,6 +104,12 @@ highlight('BufferLineCloseButton',        { fg = c.medium_gray, bg = c.asphalt }
 highlight('BufferLineCloseButtonSelected',{ fg = c.asphalt_subtle, bg = c.blue })
 highlight('BufferLineModified',           { fg = c.dark_yellow, bg = c.asphalt })
 highlight('BufferLineModifiedSelected',   { fg = c.dark_yellow, bg = c.blue })
+highlight('BufferLineBufferSelected', { fg = c.blue, bg = c.asphalt, bold = true })
+highlight('BufferLineTabSelected',    { fg = c.blue, bg = c.asphalt, bold = true })
+highlight('BufferLineIndicatorSelected', { fg = c.blue, bg = c.asphalt })
+highlight('BufferLineSeparatorSelected', { fg = c.asphalt, bg = c.asphalt })
+highlight('BufferLineModifiedSelected', { fg = c.dark_yellow, bg = c.asphalt })
+
 
 
 
