@@ -85,33 +85,36 @@ function M.setup(opts)
   -- nvim-web-devicons
   highlight('DevIconDefault', { fg = c.blue })
 
-  -- Lualine
-  pcall(function()
-    require('lualine').setup {
-      options = {
-        theme = {
-          normal = { c = { fg = c.clouds, bg = c.dark_asphalt }},
-          insert = { c = { fg = c.clouds, bg = c.dark_blue }},
-          visual = { c = { fg = c.clouds, bg = c.dark_green }},
-          replace = { c = { fg = c.clouds, bg = c.dark_red }},
-          command = { c = { fg = c.clouds, bg = c.dark_yellow }},
-          inactive = { c = { fg = c.medium_gray, bg = c.asphalt_subtle }},
-        }
-      }
+-- Lualine
+pcall(function()
+  require('lualine').setup {
+    options = {
+      theme = {
+        normal = { c = { fg = c.clouds, bg = c.dark_asphalt }},
+        insert = { c = { fg = c.asphalt_subtle, bg = c.green }},
+        visual = { c = { fg = c.asphalt_subtle, bg = c.dark_blue }},
+        replace = { c = { fg = c.asphalt_subtle, bg = c.dark_red }},
+        command = { c = { fg = c.asphalt_subtle, bg = c.yellow }},
+        inactive = { c = { fg = c.medium_gray, bg = c.asphalt }},
+      },
+      component_separators = '',
+      section_separators = '',
     }
-  end)
+  }
+end)
 
-  -- Bufferline
-  pcall(function()
-    require("bufferline").setup {
-      highlights = {
-        fill = { fg = c.clouds, bg = c.asphalt },
-        background = { fg = c.medium_gray, bg = c.asphalt },
-        buffer_selected = { fg = c.asphalt, bg = c.blue, bold = true },
-        tab_selected = { fg = c.asphalt, bg = c.blue, bold = true },
-      }
+-- Bufferline
+pcall(function()
+  require("bufferline").setup {
+    highlights = {
+      fill = { fg = c.medium_gray, bg = c.asphalt },
+      background = { fg = c.medium_gray, bg = c.asphalt },
+      buffer_selected = { fg = c.asphalt_subtle, bg = c.blue, bold = true },
+      tab_selected = { fg = c.asphalt_subtle, bg = c.blue, bold = true },
+      indicator_selected = { fg = c.blue, bg = c.blue },
     }
-  end)
-end
+  }
+end)
+
 
 return M
