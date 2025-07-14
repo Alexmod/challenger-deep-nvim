@@ -90,6 +90,22 @@ function M.setup(opts)
   highlight('TabLineSel',  { fg = c.asphalt_subtle, bg = c.blue, bold = true })
   highlight('TabLineFill', { fg = c.medium_gray, bg = c.asphalt })
 
+  -- Bufferline highlights
+highlight('BufferLineFill',           { fg = c.medium_gray, bg = c.asphalt })
+highlight('BufferLineBackground',      { fg = c.medium_gray, bg = c.asphalt })
+highlight('BufferLineBufferVisible',   { fg = c.clouds,      bg = c.asphalt })
+highlight('BufferLineBufferSelected',  { fg = c.asphalt_subtle, bg = c.blue, gui = "bold" })
+highlight('BufferLineTab',             { fg = c.medium_gray, bg = c.asphalt })
+highlight('BufferLineTabSelected',     { fg = c.asphalt_subtle, bg = c.blue, gui = "bold" })
+highlight('BufferLineTabSeparator',    { fg = c.asphalt, bg = c.asphalt })
+highlight('BufferLineTabSeparatorSelected', { fg = c.blue, bg = c.blue })
+highlight('BufferLineIndicatorSelected',{ fg = c.blue, bg = c.blue })
+highlight('BufferLineCloseButton',         { fg = c.medium_gray, bg = c.asphalt })
+highlight('BufferLineCloseButtonSelected',{ fg = c.asphalt_subtle, bg = c.blue })
+highlight('BufferLineModified',            { fg = c.dark_yellow, bg = c.asphalt })
+highlight('BufferLineModifiedSelected',    { fg = c.dark_yellow, bg = c.blue })
+
+
   -- Lualine auto theme
   pcall(function()
     require('lualine').setup {
@@ -108,32 +124,6 @@ function M.setup(opts)
     }
   end)
 
--- Bufferline auto theme
-  -- Bufferline auto theme
-  pcall(function()
-    require("bufferline").setup {
-      options = {
-        show_buffer_close_icons = false,
-        show_close_icon = false,
-        separator_style = "thin",
-      },
-      highlights = {
-        fill =           { guifg = c.medium_gray, guibg = c.asphalt },
-        background =     { guifg = c.medium_gray, guibg = c.asphalt },
-        buffer_visible = { guifg = c.clouds,      guibg = c.asphalt },
-        buffer_selected = { guifg = c.asphalt_subtle, guibg = c.blue, gui = "bold" },
-        tab =            { guifg = c.medium_gray, guibg = c.asphalt },
-        tab_selected =   { guifg = c.asphalt_subtle, guibg = c.blue, gui = "bold" },
-        separator =      { guifg = c.asphalt,     guibg = c.asphalt },
-        separator_selected = { guifg = c.blue,    guibg = c.blue },
-        indicator_selected = { guifg = c.blue,    guibg = c.blue },
-        close_button =        { guifg = c.medium_gray, guibg = c.asphalt },
-        close_button_selected = { guifg = c.asphalt_subtle, guibg = c.blue },
-        modified =            { guifg = c.dark_yellow, guibg = c.asphalt },
-        modified_selected =   { guifg = c.dark_yellow, guibg = c.blue },
-      }
-    }
-  end)
 
 end
 
